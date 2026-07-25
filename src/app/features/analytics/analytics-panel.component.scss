@@ -1,0 +1,59 @@
+:host {
+  display: block;
+}
+
+.bev-analytics__section {
+  margin: 0.75rem 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--bev-text);
+}
+
+.bev-analytics__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.68rem;
+  color: var(--bev-text-muted);
+}
+
+.lg::before {
+  content: '';
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.2rem;
+  margin-right: 0.25rem;
+  vertical-align: middle;
+  background: currentColor;
+}
+
+.lg--plant {
+  color: var(--bev-plant);
+}
+
+.lg--prey {
+  color: var(--bev-prey);
+}
+
+.lg--predator {
+  color: var(--bev-predator);
+}
+
+.lg--dash::before {
+  background: repeating-linear-gradient(
+    90deg,
+    currentColor 0 3px,
+    transparent 3px 6px
+  );
+}
+
+.bev-analytics__params {
+  margin: 0.45rem 0 0;
+  font-size: 0.68rem;
+  color: var(--bev-text-muted);
+}
+
+.mono {
+  font-family: var(--bev-font-mono);
+}

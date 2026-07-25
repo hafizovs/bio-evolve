@@ -1,0 +1,19 @@
+<div class="bev-hotkeys" role="dialog" [attr.aria-label]="i18n.t('hotkeys.title')">
+  <button type="button" class="bev-hotkeys__backdrop" [attr.aria-label]="i18n.t('hotkeys.close')" (click)="close()"></button>
+  <div class="bev-hotkeys__card">
+    <div class="bev-hotkeys__head">
+      <h2>{{ i18n.t('hotkeys.title') }}</h2>
+      <button type="button" [attr.aria-label]="i18n.t('hotkeys.close')" (click)="close()">
+        {{ i18n.t('hotkeys.close') }}
+      </button>
+    </div>
+    <ul class="bev-hotkeys__list">
+      @for (row of rows; track row.key) {
+        <li>
+          <kbd>{{ row.key }}</kbd>
+          <span>{{ i18n.t(row.labelKey) }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+</div>

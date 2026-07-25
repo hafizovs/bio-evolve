@@ -1,0 +1,18 @@
+<footer class="bev-status">
+  <span>{{ i18n.t('status.tick') }}: {{ simulation.tick() }}</span>
+  <span>{{ i18n.t('status.time') }}: {{ simulation.simulationTime().toFixed(1) }}s</span>
+  <span>
+    P {{ simulation.counts().plants }} /
+    H {{ simulation.counts().prey }} /
+    W {{ simulation.counts().predators }}
+  </span>
+  <span>{{ i18n.t('status.mutation') }}: {{ (simulation.settings().mutationRate * 100).toFixed(0) }}%</span>
+  <span>{{ i18n.t('status.selection') }}: {{ (simulation.settings().selectionPressure * 100).toFixed(0) }}%</span>
+  <span>{{ i18n.t('status.speed') }}: ×{{ simulation.settings().simSpeed.toFixed(2) }}</span>
+  <span
+    class="bev-status__badge"
+    [class.bev-status__badge--paused]="!simulation.isPlaying()"
+  >
+    {{ simulation.isPlaying() ? i18n.t('status.playing') : i18n.t('status.paused') }}
+  </span>
+</footer>

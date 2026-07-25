@@ -1,0 +1,56 @@
+:host {
+  display: block;
+}
+
+.bev-passport {
+  border-color: color-mix(in srgb, var(--bev-accent) 45%, var(--bev-border));
+}
+
+.bev-passport__grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.35rem 0.75rem;
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+.bev-passport__grid dt {
+  color: var(--bev-text-muted);
+}
+
+.bev-passport__grid dd {
+  margin: 0;
+  text-align: right;
+}
+
+.mono {
+  font-family: var(--bev-font-mono);
+}
+
+.bev-passport__energy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  min-width: 8rem;
+}
+
+.bev-passport__bar {
+  width: 100%;
+  height: 6px;
+  background: var(--bev-bg-deep);
+  border: 1px solid var(--bev-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.bev-passport__bar-fill {
+  height: 100%;
+  background: var(--bev-accent);
+}
+
+.bev-passport__empty {
+  margin: 0;
+  color: var(--bev-text-muted);
+  font-size: 0.85rem;
+}

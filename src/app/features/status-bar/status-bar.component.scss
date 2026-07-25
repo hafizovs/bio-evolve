@@ -1,0 +1,34 @@
+:host {
+  display: block;
+  position: relative;
+  z-index: 15;
+}
+
+.bev-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  align-items: center;
+  min-height: 32px;
+  padding: 0.35rem 0.85rem;
+  background: var(--bev-bg-panel);
+  border-top: 1px solid var(--bev-border);
+  font-family: var(--bev-font-mono);
+  font-size: 0.72rem;
+  color: var(--bev-text-muted);
+}
+
+.bev-status__badge {
+  margin-left: auto;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--bev-plant) 25%, transparent);
+  color: var(--bev-plant);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.bev-status__badge--paused {
+  background: color-mix(in srgb, var(--bev-accent-2) 25%, transparent);
+  color: var(--bev-accent-2);
+}

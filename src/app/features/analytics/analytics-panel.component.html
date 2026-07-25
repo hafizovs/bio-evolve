@@ -1,0 +1,31 @@
+<section class="bev-panel bev-analytics">
+  <h2 class="bev-panel__title">{{ i18n.t('analytics.title') }}</h2>
+
+  <h3 class="bev-analytics__section">{{ i18n.t('analytics.population') }}</h3>
+  <div class="bev-analytics__legend">
+    <span class="lg lg--plant">{{ i18n.t('analytics.legend.plants') }}</span>
+    <span class="lg lg--prey">{{ i18n.t('analytics.legend.prey') }}</span>
+    <span class="lg lg--predator">{{ i18n.t('analytics.legend.predators') }}</span>
+  </div>
+  <bev-population-chart />
+
+  <h3 class="bev-analytics__section">{{ i18n.t('analytics.geneStats') }}</h3>
+  <bev-gene-stats-view />
+
+  <h3 class="bev-analytics__section">{{ i18n.t('analytics.lvCompare') }}</h3>
+  <div class="bev-analytics__legend">
+    <span class="lg lg--prey">{{ i18n.t('analytics.legend.agentPrey') }}</span>
+    <span class="lg lg--predator">{{ i18n.t('analytics.legend.agentPredators') }}</span>
+    <span class="lg lg--prey lg--dash">{{ i18n.t('analytics.legend.lvPrey') }}</span>
+    <span class="lg lg--predator lg--dash">{{ i18n.t('analytics.legend.lvPredators') }}</span>
+  </div>
+  <bev-lv-compare-chart />
+
+  @let lv = simulation.lvState();
+  <p class="bev-analytics__params mono">
+    α={{ lv.params.alpha.toFixed(3) }}
+    β={{ lv.params.beta.toFixed(3) }}
+    γ={{ lv.params.gamma.toFixed(3) }}
+    δ={{ lv.params.delta.toFixed(3) }}
+  </p>
+</section>

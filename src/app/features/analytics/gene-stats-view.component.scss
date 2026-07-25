@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+.bev-genes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+.bev-genes__col h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  color: var(--bev-accent);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  color: var(--bev-text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.mono {
+  font-family: var(--bev-font-mono);
+  color: var(--bev-text);
+}

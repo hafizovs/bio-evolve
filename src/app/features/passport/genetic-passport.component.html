@@ -1,0 +1,58 @@
+<section class="bev-panel bev-passport" aria-live="polite">
+  <h2 class="bev-panel__title">{{ i18n.t('passport.title') }}</h2>
+
+  @if (agent(); as a) {
+    <dl class="bev-passport__grid">
+      <dt>{{ i18n.t('passport.id') }}</dt>
+      <dd class="mono">{{ a.id }}</dd>
+
+      <dt>{{ i18n.t('passport.kind') }}</dt>
+      <dd>{{ kindLabel(a.kind) }}</dd>
+
+      <dt>{{ i18n.t('passport.fsm') }}</dt>
+      <dd>{{ fsmLabel(a.fsmState) }}</dd>
+
+      <dt>{{ i18n.t('passport.generation') }}</dt>
+      <dd class="mono">{{ a.generation }}</dd>
+
+      <dt>{{ i18n.t('passport.age') }}</dt>
+      <dd class="mono">{{ fmt(a.age, 1) }} {{ i18n.t('passport.seconds') }}</dd>
+
+      <dt>{{ i18n.t('passport.energy') }}</dt>
+      <dd>
+        <div class="bev-passport__energy">
+          <span class="mono">{{ fmt(a.energy, 1) }} / {{ fmt(a.genes.maxEnergy, 1) }}</span>
+          <div class="bev-passport__bar" role="progressbar" [attr.aria-valuenow]="energyRatio()" aria-valuemin="0" aria-valuemax="1">
+            <div class="bev-passport__bar-fill" [style.width.%]="energyRatio() * 100"></div>
+          </div>
+        </div>
+      </dd>
+
+      <dt>{{ i18n.t('passport.visionRange') }}</dt>
+      <dd class="mono">{{ fmt(a.genes.visionRange) }}</dd>
+
+      <dt>{{ i18n.t('passport.maxSpeed') }}</dt>
+      <dd class="mono">{{ fmt(a.genes.maxSpeed) }}</dd>
+
+      <dt>{{ i18n.t('passport.maxEnergy') }}</dt>
+      <dd class="mono">{{ fmt(a.genes.maxEnergy) }}</dd>
+
+      <dt>{{ i18n.t('passport.metabolism') }}</dt>
+      <dd class="mono">{{ fmt(a.genes.metabolism) }}</dd>
+
+      <dt>{{ i18n.t('passport.reproductiveAge') }}</dt>
+      <dd class="mono">{{ fmt(a.genes.reproductiveAge) }}</dd>
+
+      <dt>{{ i18n.t('passport.reproductionEnergyThreshold') }}</dt>
+      <dd class="mono">{{ fmt(a.genes.reproductionEnergyThreshold) }}</dd>
+
+      <dt>{{ i18n.t('passport.bodySize') }}</dt>
+      <dd class="mono">{{ fmt(a.genes.bodySize) }}</dd>
+
+      <dt>{{ i18n.t('passport.parents') }}</dt>
+      <dd class="mono">{{ parentsLabel(a.parentIds) }}</dd>
+    </dl>
+  } @else {
+    <p class="bev-passport__empty">{{ i18n.t('passport.empty') }}</p>
+  }
+</section>

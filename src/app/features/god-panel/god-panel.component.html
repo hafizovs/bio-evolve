@@ -1,0 +1,118 @@
+<section class="bev-panel bev-god">
+  <h2 class="bev-panel__title">{{ i18n.t('god.title') }}</h2>
+
+  <div class="bev-god__counts">
+    <span class="bev-swatch bev-swatch--plant"></span>
+    <span>{{ i18n.t('god.counts.plants') }}: {{ counts().plants }}</span>
+    <span class="bev-swatch bev-swatch--prey"></span>
+    <span>{{ i18n.t('god.counts.prey') }}: {{ counts().prey }}</span>
+    <span class="bev-swatch bev-swatch--predator"></span>
+    <span>{{ i18n.t('god.counts.predators') }}: {{ counts().predators }}</span>
+  </div>
+
+  <div class="bev-god__spawns">
+    <button
+      type="button"
+      [disabled]="preyDisabled()"
+      [attr.aria-disabled]="preyDisabled()"
+      [attr.title]="preyDisabled() ? i18n.t('god.limitReached') : null"
+      [attr.aria-label]="i18n.t('god.spawnPrey')"
+      (click)="spawnPrey()"
+    >
+      {{ i18n.t('god.spawnPrey') }}
+    </button>
+    <button
+      type="button"
+      [disabled]="predatorDisabled()"
+      [attr.aria-disabled]="predatorDisabled()"
+      [attr.title]="predatorDisabled() ? i18n.t('god.limitReached') : null"
+      [attr.aria-label]="i18n.t('god.spawnPredators')"
+      (click)="spawnPredators()"
+    >
+      {{ i18n.t('god.spawnPredators') }}
+    </button>
+    <button
+      type="button"
+      [disabled]="plantsDisabled()"
+      [attr.aria-disabled]="plantsDisabled()"
+      [attr.title]="plantsDisabled() ? i18n.t('god.limitReached') : null"
+      [attr.aria-label]="i18n.t('god.seedPlants')"
+      (click)="seedPlants()"
+    >
+      {{ i18n.t('god.seedPlants') }}
+    </button>
+  </div>
+
+  <label class="bev-slider">
+    <span>{{ i18n.t('god.mutation') }}</span>
+    <input
+      type="range"
+      min="0"
+      max="100"
+      step="1"
+      [value]="mutationPct()"
+      [attr.aria-label]="i18n.t('god.mutation')"
+      [attr.aria-valuemin]="0"
+      [attr.aria-valuemax]="100"
+      [attr.aria-valuenow]="mutationPct()"
+      (input)="onMutation($event)"
+    />
+    <span class="bev-slider__value">{{ mutationPct() }}%</span>
+  </label>
+
+  <label class="bev-slider">
+    <span>{{ i18n.t('god.selection') }}</span>
+    <input
+      type="range"
+      min="0"
+      max="100"
+      step="1"
+      [value]="selectionPct()"
+      [attr.aria-label]="i18n.t('god.selection')"
+      [attr.aria-valuemin]="0"
+      [attr.aria-valuemax]="100"
+      [attr.aria-valuenow]="selectionPct()"
+      (input)="onSelection($event)"
+    />
+    <span class="bev-slider__value">{{ selectionPct() }}%</span>
+  </label>
+
+  <label class="bev-slider">
+    <span>{{ i18n.t('god.simSpeed') }}</span>
+    <input
+      type="range"
+      [min]="speedMin"
+      [max]="speedMax"
+      step="0.25"
+      [value]="settings().simSpeed"
+      [attr.aria-label]="i18n.t('god.simSpeed')"
+      [attr.aria-valuemin]="speedMin"
+      [attr.aria-valuemax]="speedMax"
+      [attr.aria-valuenow]="settings().simSpeed"
+      (input)="onSpeed($event)"
+    />
+    <span class="bev-slider__value">×{{ settings().simSpeed.toFixed(2) }}</span>
+  </label>
+
+  <div class="bev-god__time">
+    <button
+      type="button"
+      class="bev-god__play"
+      [attr.aria-label]="isPlaying() ? i18n.t('god.pause') : i18n.t('god.play')"
+      [attr.aria-pressed]="isPlaying()"
+      (click)="togglePlay()"
+    >
+      {{ isPlaying() ? i18n.t('god.pause') : i18n.t('god.play') }}
+    </button>
+
+    @if (simulation.selectedAgentId()) {
+      <button
+        type="button"
+        [attr.aria-label]="i18n.t('god.clearFocus')"
+        (click)="clearFocus()"
+      >
+        {{ i18n.t('god.clearFocus') }}
+      </button>
+    }
+  </div>
+</section>
