@@ -1,0 +1,109 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--bev-bg-deep);
+  color: var(--bev-text);
+  font-family: var(--bev-font-ui);
+}
+
+.bev-shell {
+  position: relative;
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  min-height: 0;
+  z-index: 0;
+}
+
+.bev-shell__canvas {
+  z-index: 0;
+  min-width: 0;
+  min-height: 0;
+}
+
+.bev-shell__side {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.65rem;
+  overflow: auto;
+  background: color-mix(in srgb, var(--bev-bg-deep) 55%, transparent);
+  border-left: 1px solid var(--bev-border);
+}
+
+.bev-shell__drawer-backdrop {
+  display: none;
+}
+
+.bev-extinction {
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  transform: translateX(-50%);
+  z-index: 12;
+  width: min(520px, calc(100% - 2rem));
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--bev-danger);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--bev-bg-panel) 92%, var(--bev-danger));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.bev-extinction p {
+  margin: 0 0 0.55rem;
+  font-size: 0.9rem;
+}
+
+.bev-extinction__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.bev-extinction__actions button {
+  appearance: none;
+  border: 1px solid var(--bev-border);
+  background: var(--bev-bg-panel-elevated);
+  color: var(--bev-text);
+  border-radius: 4px;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+  font-family: var(--bev-font-ui);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 999px) {
+  .bev-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .bev-shell__side {
+    position: fixed;
+    top: 48px;
+    right: 0;
+    bottom: 32px;
+    width: min(360px, 92vw);
+    transform: translateX(105%);
+    transition: transform 0.2s ease;
+    background: var(--bev-bg-panel);
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .bev-shell__side--open {
+    transform: translateX(0);
+  }
+
+  .bev-shell__drawer-backdrop {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 9;
+    border: 0;
+    background: rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+  }
+}
