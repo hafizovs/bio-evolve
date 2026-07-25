@@ -1,0 +1,46 @@
+<bev-toolbar />
+
+<main class="bev-shell">
+  <bev-sim-canvas class="bev-shell__canvas" />
+
+  @if (ui.mobileDrawerOpen()) {
+    <button
+      type="button"
+      class="bev-shell__drawer-backdrop"
+      [attr.aria-label]="i18n.t('hotkeys.close')"
+      (click)="closeDrawer()"
+    ></button>
+  }
+
+  <aside
+    class="bev-shell__side"
+    [class.bev-shell__side--open]="ui.mobileDrawerOpen()"
+  >
+    <bev-god-panel />
+    <bev-genetic-passport />
+    <bev-analytics-panel />
+  </aside>
+
+  @if (simulation.isExtinct()) {
+    <div class="bev-extinction" role="status">
+      <p>{{ i18n.t('banner.extinction') }}</p>
+      <div class="bev-extinction__actions">
+        <button type="button" (click)="bannerSpawnPrey()">
+          {{ i18n.t('banner.spawnPrey') }}
+        </button>
+        <button type="button" (click)="bannerSpawnPredators()">
+          {{ i18n.t('banner.spawnPredators') }}
+        </button>
+        <button type="button" (click)="bannerSeedPlants()">
+          {{ i18n.t('banner.seedPlants') }}
+        </button>
+      </div>
+    </div>
+  }
+</main>
+
+<bev-status-bar />
+
+@if (ui.hotkeysHelpOpen()) {
+  <bev-hotkeys-help />
+}
