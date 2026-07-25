@@ -1,0 +1,33 @@
+<header class="bev-toolbar">
+  <div class="bev-toolbar__brand">
+    <span class="bev-toolbar__title">BioEvolve</span>
+    <span class="bev-toolbar__subtitle">{{ i18n.t('brand.subtitle') }}</span>
+  </div>
+
+  <div class="bev-toolbar__spacer"></div>
+
+  <button
+    type="button"
+    class="bev-toolbar__mobile"
+    [attr.aria-label]="i18n.t('toolbar.panels')"
+    (click)="togglePanels()"
+  >
+    {{ i18n.t('toolbar.panels') }}
+  </button>
+
+  <button type="button" [attr.aria-label]="i18n.t('toolbar.reset')" (click)="reset()">
+    {{ i18n.t('toolbar.reset') }}
+  </button>
+  <button type="button" [attr.aria-label]="i18n.t('toolbar.screenshot')" (click)="capture()">
+    {{ i18n.t('toolbar.screenshot') }}
+  </button>
+  <button type="button" [attr.aria-label]="i18n.t('toolbar.theme')" (click)="toggleTheme()">
+    {{ i18n.t('toolbar.theme') }}
+  </button>
+  <button type="button" [attr.aria-label]="i18n.t('toolbar.lang')" (click)="toggleLang()">
+    {{ ui.locale() === 'ru' ? 'RU' : 'EN' }}
+  </button>
+  <button type="button" [attr.aria-label]="i18n.t('toolbar.hotkeys')" (click)="toggleHotkeys()">
+    {{ i18n.t('toolbar.hotkeys') }}
+  </button>
+</header>

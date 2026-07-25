@@ -1,0 +1,23 @@
+<div class="bev-genes">
+  @let stats = analytics.geneStats();
+
+  <div class="bev-genes__col">
+    <h4>{{ i18n.t('kind.prey') }}</h4>
+    <div class="row"><span>{{ i18n.t('analytics.count') }}</span><span class="mono">{{ stats.prey.count }}</span></div>
+    <div class="row"><span>{{ i18n.t('analytics.avgVision') }}</span><span class="mono">{{ fmt(stats.prey, 'avgVisionRange') }}</span></div>
+    <div class="row"><span>{{ i18n.t('analytics.avgSpeed') }}</span><span class="mono">{{ fmt(stats.prey, 'avgMaxSpeed') }}</span></div>
+    <div class="row"><span>{{ i18n.t('analytics.avgMetabolism') }}</span><span class="mono">{{ fmt(stats.prey, 'avgMetabolism') }}</span></div>
+    <div class="row"><span>{{ i18n.t('analytics.avgBody') }}</span><span class="mono">{{ fmt(stats.prey, 'avgBodySize') }}</span></div>
+    <div class="row"><span>{{ i18n.t('analytics.avgGeneration') }}</span><span class="mono">{{ fmt(stats.prey, 'avgGeneration') }}</span></div>
+  </div>
+
+  <div class="bev-genes__col">
+    <h4>{{ i18n.t('kind.predator') }}</h4>
+    <div class="row"><span>{{ i18n.t('analytics.count') }}</span><span class="mono">{{ stats.predators.count }}</span></div>
+    <div class="row"><span>{{ i18n.t('analytics.avgVision') }}</span><span class="mono">{{ fmt(stats.predators, 'avgVisionRange') }}</span></div>
+    <div class="row"><span>{{ i18n.t('analytics.avgSpeed') }}</span><span class="mono">{{ fmt(stats.predators, 'avgMaxSpeed') }}</span></div>
+    <div class="row"><span>{{ i18n.t('analytics.avgMetabolism') }}</span><span class="mono">{{ fmt(stats.predators, 'avgMetabolism') }}</span></div>
+    <div class="row"><span>{{ i18n.t('analytics.avgBody') }}</span><span class="mono">{{ fmt(stats.predators, 'avgBodySize') }}</span></div>
+    <div class="row"><span>{{ i18n.t('analytics.avgGeneration') }}</span><span class="mono">{{ fmt(stats.predators, 'avgGeneration') }}</span></div>
+  </div>
+</div>
