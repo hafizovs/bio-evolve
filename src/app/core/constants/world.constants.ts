@@ -1,0 +1,10 @@
+export const WORLD_WIDTH = 1200;
+export const WORLD_HEIGHT = 800;
+export const INITIAL_PLANTS = 120;
+export const INITIAL_PREY = 40;
+export const INITIAL_PREDATORS = 10;
+export const MAX_PLANTS = 400;
+export const MAX_PREY = 300;
+export const MAX_PREDATORS = 120;
+export const MAX_TOTAL_AGENTS = 400;
+export const WORLD_SPAWN_MARGIN = 20;

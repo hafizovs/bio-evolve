@@ -1,0 +1,25 @@
+export const PLANT_ENERGY_VALUE = 25;
+export const PLANT_RADIUS = 4;
+/** Expected regrowth ≈ rate * dt * livingPlants (see appendix B.6). */
+export const PLANT_REGROW_CHANCE_PER_SECOND = 0.15;
+export const PREY_EAT_RADIUS_FACTOR = 1.0;
+export const PREDATOR_KILL_RADIUS_FACTOR = 1.1;
+export const PREDATION_ENERGY_GAIN = 45;
+export const REPRODUCTION_COOLDOWN = 4;
+export const OFFSPRING_ENERGY_FRACTION = 0.4;
+export const PARENT_ENERGY_COST_FRACTION = 0.35;
+export const METABOLISM_SPEED_COEFF = 0.04;
+export const METABOLISM_SELECTION_COEFF = 0.35;
+export const PANIC_SPEED_MULT = 1.15;
+export const PANIC_ENERGY_MULT = 1.25;
+export const LOW_ENERGY_THRESHOLD = 0.25;
+export const LOW_ENERGY_SPEED_MULT = 0.55;
+export const REST_ENERGY_THRESHOLD = 0.15;
+export const REST_METABOLISM_MULT = 0.7;
+export const TURN_RATE = 8;
+export const SEED_PLANTS_BATCH = 40;
+export const WANDER_STRENGTH = 0.35;
+export const LV_ALPHA = 0.55;
+export const LV_BETA = 0.025;
+export const LV_GAMMA = 0.45;
+export const LV_DELTA = 0.012;
