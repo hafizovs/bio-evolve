@@ -1,0 +1,4 @@
+export const MUTATION_RATE_DEFAULT = 0.08;
+export const MUTATION_STRENGTH = 0.12;
+export const SELECTION_PRESSURE_DEFAULT = 0.5;
+export const CROSSOVER_BLEND = 0.5;

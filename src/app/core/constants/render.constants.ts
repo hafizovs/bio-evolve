@@ -1,0 +1,16 @@
+export const MAX_DPR = 2;
+export const GRID_STEP_WU = 40;
+export const PICK_RADIUS_PX = 12;
+export const MIN_AGENT_SCREEN_RADIUS_PX = 3;
+export const MAX_AGENT_SCREEN_RADIUS_PX = 16;
+export const DIRECTION_VECTOR_LENGTH_PX = 10;
+export const ZOOM_MIN = 0.4;
+export const ZOOM_MAX = 4;
+export const ZOOM_WHEEL_SENSITIVITY = 0.0012;
+export const COLOR_PLANT = '#3ecf6a';
+export const COLOR_PREY = '#4da3ff';
+export const COLOR_PREDATOR = '#e85d5d';
+export const COLOR_PANIC = '#f0b429';
+export const COLOR_SELECTION = '#3dd6c6';
+export const COLOR_WORLD_BG = '#070b12';
+export const COLOR_GRID = 'rgba(61, 214, 198, 0.06)';
