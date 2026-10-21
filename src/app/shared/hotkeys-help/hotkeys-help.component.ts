@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { I18nService } from '../../services/i18n.service';
-import { UiStore } from '../../state/ui.store';
+import { I18nService } from '../../core/services/i18n.service';
+import { UiStore } from '../../core/ui/ui.store';
 
 @Component({
   selector: 'bev-hotkeys-help',

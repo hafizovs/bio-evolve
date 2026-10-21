@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { I18nService } from '../../services/i18n.service';
-import { SimulationStore } from '../../state/simulation.store';
+import { I18nService } from '../../core/services/i18n.service';
+import { SimulationStore } from '../sim-canvas/simulation.store';
 import { GeneStatsViewComponent } from './gene-stats-view.component';
 import { LvCompareChartComponent } from './lv-compare-chart.component';
 import { PopulationChartComponent } from './population-chart.component';

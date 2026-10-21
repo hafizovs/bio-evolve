@@ -1,3 +1,7 @@
+## Live demo
+
+https://hafizovs.github.io/bio-evolve/
+
 # BioEvolve
 
 Симулятор экосистемы и направленной эволюции (жертвы / хищники / растения) на Angular 22+ с Canvas 2D, генетикой, FSM и параллельной моделью Lotka–Volterra.
@@ -5,7 +9,6 @@
 ## Установка и запуск
 
 ```bash
-cd bio_evolve/bio_evolve_auto
 npm install
 npm start
 ```
@@ -18,6 +21,12 @@ npm start
 npm test
 # или
 npm run test:unit
+```
+
+## Сборка
+
+```bash
+npm run build
 ```
 
 ## Горячие клавиши
@@ -34,10 +43,6 @@ npm run test:unit
 | 2 | +10 волков |
 | 3 | Засеять травой |
 | H | Справка по клавишам |
-
-## Документация промпта
-
-Полный пакет требований: [`../docs/`](../docs/) (`INDEX.md` → `01`…`09` + appendices).
 
 ## Стек
 

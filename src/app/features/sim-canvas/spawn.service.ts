@@ -3,7 +3,7 @@ import {
   PLANT_ENERGY_VALUE,
   PLANT_RADIUS,
   SEED_PLANTS_BATCH,
-} from '../core/constants/ecology.constants';
+} from '../../core/constants/ecology.constants';
 import {
   INITIAL_PLANTS,
   INITIAL_PREDATORS,
@@ -15,16 +15,16 @@ import {
   WORLD_HEIGHT,
   WORLD_SPAWN_MARGIN,
   WORLD_WIDTH,
-} from '../core/constants/world.constants';
-import { Agent } from '../core/models/agent.model';
-import { Plant } from '../core/models/plant.model';
-import { Vec2 } from '../core/models/vec2.model';
-import { createRandomGenes } from '../domain/genetics/random-dna';
-import { randomRange } from '../domain/math/rng';
-import { CameraStore } from '../state/camera.store';
-import { AnalyticsStore } from '../state/analytics.store';
-import { SimulationStore } from '../state/simulation.store';
-import { createDefaultLvState } from '../domain/math/lotka-volterra';
+} from '../../core/constants/world.constants';
+import { Agent } from '../../core/models/agent.model';
+import { Plant } from '../../core/models/plant.model';
+import { Vec2 } from '../../core/models/vec2.model';
+import { createRandomGenes } from '../../domain/genetics/random-dna';
+import { randomRange } from '../../domain/math/rng';
+import { CameraStore } from './camera.store';
+import { AnalyticsStore } from '../analytics/analytics.store';
+import { SimulationStore } from './simulation.store';
+import { createDefaultLvState } from '../../domain/math/lotka-volterra';
 
 @Injectable({ providedIn: 'root' })
 export class SpawnService {

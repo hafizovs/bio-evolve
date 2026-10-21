@@ -1,10 +1,10 @@
 import { Injectable, signal } from '@angular/core';
-import { HISTORY_MAX_SAMPLES } from '../core/constants/simulation.constants';
-import { Agent } from '../core/models/agent.model';
-import { GeneStatsSnapshot } from '../core/models/gene-stats.model';
-import { LotkaVolterraSample } from '../core/models/lotka-volterra.model';
-import { PopulationSample } from '../core/models/population-sample.model';
-import { computeGeneStats } from '../domain/genetics/gene-stats';
+import { HISTORY_MAX_SAMPLES } from '../../core/constants/simulation.constants';
+import { Agent } from '../../core/models/agent.model';
+import { GeneStatsSnapshot } from '../../core/models/gene-stats.model';
+import { LotkaVolterraSample } from '../../core/models/lotka-volterra.model';
+import { PopulationSample } from '../../core/models/population-sample.model';
+import { computeGeneStats } from '../../domain/genetics/gene-stats';
 
 function emptyGeneStats(): GeneStatsSnapshot {
   return {

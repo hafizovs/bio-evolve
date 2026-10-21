@@ -10,10 +10,10 @@ import {
   SIM_SPEED_MAX,
   SIM_SPEED_MIN,
 } from '../../core/constants/simulation.constants';
-import { I18nService } from '../../services/i18n.service';
-import { SpawnService } from '../../services/spawn.service';
-import { CameraStore } from '../../state/camera.store';
-import { SimulationStore } from '../../state/simulation.store';
+import { I18nService } from '../../core/services/i18n.service';
+import { SpawnService } from '../sim-canvas/spawn.service';
+import { CameraStore } from '../sim-canvas/camera.store';
+import { SimulationStore } from '../sim-canvas/simulation.store';
 
 @Component({
   selector: 'bev-god-panel',

@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
-import { LocaleId } from '../core/models/locale.model';
-import { ThemeId } from '../core/models/theme.model';
+import { LocaleId } from '../models/locale.model';
+import { ThemeId } from '../models/theme.model';
 
 @Injectable({ providedIn: 'root' })
 export class UiStore {

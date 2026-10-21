@@ -9,7 +9,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { MAX_DPR } from '../../core/constants/render.constants';
-import { AnalyticsStore } from '../../state/analytics.store';
+import { AnalyticsStore } from './analytics.store';
 import { drawPopulationChart } from './population-chart.renderer';
 
 @Component({

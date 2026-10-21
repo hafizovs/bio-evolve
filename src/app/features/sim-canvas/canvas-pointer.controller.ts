@@ -1,7 +1,7 @@
 import { PICK_RADIUS_PX, ZOOM_WHEEL_SENSITIVITY } from '../../core/constants/render.constants';
 import { Agent } from '../../core/models/agent.model';
-import { CameraStore } from '../../state/camera.store';
-import { SimulationStore } from '../../state/simulation.store';
+import { CameraStore } from './camera.store';
+import { SimulationStore } from './simulation.store';
 import { screenToWorld } from './canvas-camera';
 
 export class CanvasPointerController {

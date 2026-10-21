@@ -1,12 +1,12 @@
 import { DestroyRef, inject, Injectable } from '@angular/core';
-import { SEED_PLANTS_BATCH } from '../core/constants/ecology.constants';
-import { CameraStore } from '../state/camera.store';
-import { SimulationStore } from '../state/simulation.store';
-import { UiStore } from '../state/ui.store';
+import { SEED_PLANTS_BATCH } from '../constants/ecology.constants';
+import { CameraStore } from '../../features/sim-canvas/camera.store';
+import { SimulationStore } from '../../features/sim-canvas/simulation.store';
+import { UiStore } from '../ui/ui.store';
 import { ScreenshotService } from './screenshot.service';
-import { SpawnService } from './spawn.service';
+import { SpawnService } from '../../features/sim-canvas/spawn.service';
 import { I18nService } from './i18n.service';
-import { SimulationEngineService } from './simulation-engine.service';
+import { SimulationEngineService } from '../../features/sim-canvas/simulation-engine.service';
 
 function isEditableTarget(target: EventTarget | null): boolean {
   if (!(target instanceof HTMLElement)) {

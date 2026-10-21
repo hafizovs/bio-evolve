@@ -1,9 +1,9 @@
 import { Injectable, signal } from '@angular/core';
-import { LocaleId } from '../core/models/locale.model';
+import { LocaleId } from '../models/locale.model';
 import { I18nKey } from '../i18n/i18n.keys';
 import { EN_DICT } from '../i18n/dictionaries/en';
 import { RU_DICT } from '../i18n/dictionaries/ru';
-import { UiStore } from '../state/ui.store';
+import { UiStore } from '../ui/ui.store';
 import { inject } from '@angular/core';
 
 const DICTS: Record<LocaleId, Record<I18nKey, string>> = {

@@ -2,22 +2,22 @@ import { computed, Injectable, signal } from '@angular/core';
 import {
   MUTATION_RATE_DEFAULT,
   SELECTION_PRESSURE_DEFAULT,
-} from '../core/constants/genetics.constants';
-import { SIM_SPEED_DEFAULT } from '../core/constants/simulation.constants';
+} from '../../core/constants/genetics.constants';
+import { SIM_SPEED_DEFAULT } from '../../core/constants/simulation.constants';
 import {
   INITIAL_PREDATORS,
   INITIAL_PREY,
   WORLD_HEIGHT,
   WORLD_WIDTH,
-} from '../core/constants/world.constants';
-import { Agent } from '../core/models/agent.model';
-import { LotkaVolterraState } from '../core/models/lotka-volterra.model';
-import { Plant } from '../core/models/plant.model';
-import { SimulationSettings } from '../core/models/simulation-settings.model';
-import { WorldConfig } from '../core/models/world-config.model';
-import { createDefaultLvState } from '../domain/math/lotka-volterra';
-import { clamp } from '../domain/math/clamp';
-import { SIM_SPEED_MAX, SIM_SPEED_MIN } from '../core/constants/simulation.constants';
+} from '../../core/constants/world.constants';
+import { Agent } from '../../core/models/agent.model';
+import { LotkaVolterraState } from '../../core/models/lotka-volterra.model';
+import { Plant } from '../../core/models/plant.model';
+import { SimulationSettings } from '../../core/models/simulation-settings.model';
+import { WorldConfig } from '../../core/models/world-config.model';
+import { createDefaultLvState } from '../../domain/math/lotka-volterra';
+import { clamp } from '../../domain/math/clamp';
+import { SIM_SPEED_MAX, SIM_SPEED_MIN } from '../../core/constants/simulation.constants';
 
 export interface EngineSnapshot {
   plants: Plant[];

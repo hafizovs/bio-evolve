@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { AgentFsmState } from '../../core/models/agent-fsm-state.model';
-import { I18nKey } from '../../i18n/i18n.keys';
-import { I18nService } from '../../services/i18n.service';
-import { SimulationStore } from '../../state/simulation.store';
+import { I18nKey } from '../../core/i18n/i18n.keys';
+import { I18nService } from '../../core/services/i18n.service';
+import { SimulationStore } from '../sim-canvas/simulation.store';
 
 @Component({
   selector: 'bev-genetic-passport',

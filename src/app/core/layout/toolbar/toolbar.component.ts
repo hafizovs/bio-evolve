@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { I18nService } from '../../services/i18n.service';
 import { ScreenshotService } from '../../services/screenshot.service';
-import { SimulationEngineService } from '../../services/simulation-engine.service';
-import { SpawnService } from '../../services/spawn.service';
-import { UiStore } from '../../state/ui.store';
+import { SimulationEngineService } from '../../../features/sim-canvas/simulation-engine.service';
+import { SpawnService } from '../../../features/sim-canvas/spawn.service';
+import { UiStore } from '../../ui/ui.store';
 
 @Component({
   selector: 'bev-toolbar',

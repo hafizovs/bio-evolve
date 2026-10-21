@@ -8,10 +8,10 @@ import {
   viewChild,
 } from '@angular/core';
 import { MAX_DPR } from '../../core/constants/render.constants';
-import { RenderLoopService } from '../../services/render-loop.service';
-import { ScreenshotService } from '../../services/screenshot.service';
-import { CameraStore } from '../../state/camera.store';
-import { SimulationStore } from '../../state/simulation.store';
+import { RenderLoopService } from '../../core/services/render-loop.service';
+import { ScreenshotService } from '../../core/services/screenshot.service';
+import { CameraStore } from './camera.store';
+import { SimulationStore } from './simulation.store';
 import { CanvasPointerController } from './canvas-pointer.controller';
 import { CanvasRenderer } from './canvas-renderer';
 

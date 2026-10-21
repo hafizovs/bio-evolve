@@ -4,28 +4,28 @@ import {
   LOW_ENERGY_THRESHOLD,
   PANIC_SPEED_MULT,
   TURN_RATE,
-} from '../core/constants/ecology.constants';
-import { DT_CLAMP_SECONDS, HISTORY_SAMPLE_EVERY_TICKS } from '../core/constants/simulation.constants';
-import { Agent } from '../core/models/agent.model';
-import { Plant } from '../core/models/plant.model';
-import { WorldConfig } from '../core/models/world-config.model';
-import { decidePredatorFsm } from '../domain/ai/predator-fsm';
-import { decidePreyFsm } from '../domain/ai/prey-fsm';
-import { scale, vecLength } from '../domain/ai/steering';
-import { applyMetabolism } from '../domain/ecology/energy';
-import { tryFeedPrey } from '../domain/ecology/feeding';
-import { tryHuntPrey } from '../domain/ecology/hunting';
-import { regrowPlants } from '../domain/ecology/plant-growth';
+} from '../../core/constants/ecology.constants';
+import { DT_CLAMP_SECONDS, HISTORY_SAMPLE_EVERY_TICKS } from '../../core/constants/simulation.constants';
+import { Agent } from '../../core/models/agent.model';
+import { Plant } from '../../core/models/plant.model';
+import { WorldConfig } from '../../core/models/world-config.model';
+import { decidePredatorFsm } from '../../domain/ai/predator-fsm';
+import { decidePreyFsm } from '../../domain/ai/prey-fsm';
+import { scale, vecLength } from '../../domain/ai/steering';
+import { applyMetabolism } from '../../domain/ecology/energy';
+import { tryFeedPrey } from '../../domain/ecology/feeding';
+import { tryHuntPrey } from '../../domain/ecology/hunting';
+import { regrowPlants } from '../../domain/ecology/plant-growth';
 import {
   isMateInRange,
   tryReproducePair,
-} from '../domain/ecology/reproduction';
-import { clamp, lerp, normalizeAngle } from '../domain/math/clamp';
-import { stepLotkaVolterra } from '../domain/math/lotka-volterra';
-import { nearestAgent, nearestPlant } from '../domain/population/nearest';
-import { SpatialHash } from '../domain/population/spatial-hash';
-import { AnalyticsStore } from '../state/analytics.store';
-import { SimulationStore } from '../state/simulation.store';
+} from '../../domain/ecology/reproduction';
+import { clamp, lerp, normalizeAngle } from '../../domain/math/clamp';
+import { stepLotkaVolterra } from '../../domain/math/lotka-volterra';
+import { nearestAgent, nearestPlant } from '../../domain/population/nearest';
+import { SpatialHash } from '../../domain/population/spatial-hash';
+import { AnalyticsStore } from '../analytics/analytics.store';
+import { SimulationStore } from './simulation.store';
 import { SpawnService } from './spawn.service';
 
 @Injectable({ providedIn: 'root' })

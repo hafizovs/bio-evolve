@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { I18nService } from '../../services/i18n.service';
-import { SimulationStore } from '../../state/simulation.store';
+import { SimulationStore } from '../../../features/sim-canvas/simulation.store';
 
 @Component({
   selector: 'bev-status-bar',

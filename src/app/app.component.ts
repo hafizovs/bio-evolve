@@ -6,16 +6,16 @@ import {
 } from '@angular/core';
 import { AnalyticsPanelComponent } from './features/analytics/analytics-panel.component';
 import { GodPanelComponent } from './features/god-panel/god-panel.component';
-import { HotkeysHelpComponent } from './features/hotkeys-help/hotkeys-help.component';
+import { HotkeysHelpComponent } from './shared/hotkeys-help/hotkeys-help.component';
 import { GeneticPassportComponent } from './features/passport/genetic-passport.component';
 import { SimCanvasComponent } from './features/sim-canvas/sim-canvas.component';
-import { StatusBarComponent } from './features/status-bar/status-bar.component';
-import { ToolbarComponent } from './features/toolbar/toolbar.component';
-import { HotkeysService } from './services/hotkeys.service';
-import { I18nService } from './services/i18n.service';
-import { SpawnService } from './services/spawn.service';
-import { SimulationStore } from './state/simulation.store';
-import { UiStore } from './state/ui.store';
+import { StatusBarComponent } from './core/layout/status-bar/status-bar.component';
+import { ToolbarComponent } from './core/layout/toolbar/toolbar.component';
+import { HotkeysService } from './core/services/hotkeys.service';
+import { I18nService } from './core/services/i18n.service';
+import { SpawnService } from './features/sim-canvas/spawn.service';
+import { SimulationStore } from './features/sim-canvas/simulation.store';
+import { UiStore } from './core/ui/ui.store';
 
 @Component({
   selector: 'bev-root',

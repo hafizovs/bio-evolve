@@ -1,7 +1,7 @@
 import { Injectable, signal } from '@angular/core';
-import { ZOOM_MAX, ZOOM_MIN } from '../core/constants/render.constants';
-import { WorldConfig } from '../core/models/world-config.model';
-import { clamp } from '../domain/math/clamp';
+import { ZOOM_MAX, ZOOM_MIN } from '../../core/constants/render.constants';
+import { WorldConfig } from '../../core/models/world-config.model';
+import { clamp } from '../../domain/math/clamp';
 
 @Injectable({ providedIn: 'root' })
 export class CameraStore {

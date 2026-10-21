@@ -1,10 +1,10 @@
 import { inject, Injectable } from '@angular/core';
-import { DT_CLAMP_SECONDS } from '../core/constants/simulation.constants';
-import { SimRenderSnapshot } from '../core/models/sim-render-snapshot.model';
-import { CanvasRenderer } from '../features/sim-canvas/canvas-renderer';
-import { CameraStore } from '../state/camera.store';
-import { SimulationStore } from '../state/simulation.store';
-import { SimulationEngineService } from './simulation-engine.service';
+import { DT_CLAMP_SECONDS } from '../constants/simulation.constants';
+import { SimRenderSnapshot } from '../models/sim-render-snapshot.model';
+import { CanvasRenderer } from '../../features/sim-canvas/canvas-renderer';
+import { CameraStore } from '../../features/sim-canvas/camera.store';
+import { SimulationStore } from '../../features/sim-canvas/simulation.store';
+import { SimulationEngineService } from '../../features/sim-canvas/simulation-engine.service';
 
 @Injectable({ providedIn: 'root' })
 export class RenderLoopService {

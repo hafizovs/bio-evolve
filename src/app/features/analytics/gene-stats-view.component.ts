@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { KindGeneAverages } from '../../core/models/gene-stats.model';
-import { I18nService } from '../../services/i18n.service';
-import { AnalyticsStore } from '../../state/analytics.store';
+import { I18nService } from '../../core/services/i18n.service';
+import { AnalyticsStore } from './analytics.store';
 
 @Component({
   selector: 'bev-gene-stats-view',
