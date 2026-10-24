@@ -4,18 +4,37 @@ https://hafizovs.github.io/bio-evolve/
 
 # BioEvolve
 
-Симулятор экосистемы и направленной эволюции (жертвы / хищники / растения) на Angular 22+ с Canvas 2D, генетикой, FSM и параллельной моделью Lotka–Volterra.
+Ecosystem and directed-evolution simulator (prey / predators / plants) on Angular 22+ with Canvas 2D, genetics, finite-state machines, and a parallel Lotka–Volterra model.
 
-## Установка и запуск
+## About
+
+BioEvolve simulates an ecosystem and directed evolution for prey, predators, and plants. It is built with Angular 22+, Canvas 2D, genetics, finite-state machines, and a parallel Lotka–Volterra model. The world and its charts share the canvas, in a Sci-Fi Dark theme.
+
+## Capabilities
+
+- Prey, predators, and plants on a Canvas 2D world
+- Genetics, finite-state machines, and a parallel Lotka–Volterra model
+- World view plus charts
+- Sci-Fi Dark theme (SCSS and CSS variables) and RU/EN
+- PNG snapshot of the sim canvas
+
+## Functionality
+
+- Pause or start with Space, reset the world with `R`, and clear focus or close help with Esc
+- Add 50 hares (`1`), add 10 wolves (`2`), or seed grass (`3`)
+- Save a PNG of the sim canvas with `S`
+- Toggle dark/light (`T`) and RU/EN (`G`), and open the hotkey help with `H`
+
+## Install and run
 
 ```bash
 npm install
 npm start
 ```
 
-Откройте URL из вывода CLI (обычно `http://localhost:4200`).
+Open the URL printed by the CLI (usually `http://localhost:4200`).
 
-## Тесты
+## Tests
 
 ```bash
 npm test
@@ -23,30 +42,30 @@ npm test
 npm run test:unit
 ```
 
-## Сборка
+## Build
 
 ```bash
 npm run build
 ```
 
-## Горячие клавиши
+## Hotkeys
 
-| Клавиша | Действие |
+| Key | Action |
 |---------|----------|
-| Space | Пауза / Старт |
-| Esc | Снять фокус / закрыть справку |
-| R | Сброс мира |
-| S | Снимок sim-canvas (PNG) |
-| T | Тема dark/light |
-| G | Язык RU/EN |
-| 1 | +50 зайцев |
-| 2 | +10 волков |
-| 3 | Засеять травой |
-| H | Справка по клавишам |
+| Space | Pause / Start |
+| Esc | Clear focus / close help |
+| R | Reset world |
+| S | Snapshot of the sim canvas (PNG) |
+| T | Theme dark/light |
+| G | Language RU/EN |
+| 1 | +50 hares |
+| 2 | +10 wolves |
+| 3 | Seed with grass |
+| H | Hotkey help |
 
-## Стек
+## Stack
 
 - Angular 22 (standalone, signals, zoneless)
-- HTML5 Canvas 2D (мир + графики)
+- HTML5 Canvas 2D (world + charts)
 - SCSS + CSS variables (Sci-Fi Dark)
 - Vitest unit tests
