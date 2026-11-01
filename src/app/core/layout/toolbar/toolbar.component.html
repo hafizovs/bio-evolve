@@ -18,7 +18,12 @@
   <button type="button" [attr.aria-label]="i18n.t('toolbar.reset')" (click)="reset()">
     {{ i18n.t('toolbar.reset') }}
   </button>
-  <button type="button" [attr.aria-label]="i18n.t('toolbar.screenshot')" (click)="capture()">
+  <button
+    type="button"
+    class="bev-toolbar__optional"
+    [attr.aria-label]="i18n.t('toolbar.screenshot')"
+    (click)="capture()"
+  >
     {{ i18n.t('toolbar.screenshot') }}
   </button>
   <button type="button" [attr.aria-label]="i18n.t('toolbar.theme')" (click)="toggleTheme()">
@@ -27,7 +32,12 @@
   <button type="button" [attr.aria-label]="i18n.t('toolbar.lang')" (click)="toggleLang()">
     {{ ui.locale() === 'ru' ? 'RU' : 'EN' }}
   </button>
-  <button type="button" [attr.aria-label]="i18n.t('toolbar.hotkeys')" (click)="toggleHotkeys()">
+  <button
+    type="button"
+    class="bev-toolbar__optional"
+    [attr.aria-label]="i18n.t('toolbar.hotkeys')"
+    (click)="toggleHotkeys()"
+  >
     {{ i18n.t('toolbar.hotkeys') }}
   </button>
 </header>

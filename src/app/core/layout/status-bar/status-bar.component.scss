@@ -9,8 +9,11 @@
   flex-wrap: wrap;
   gap: 0.65rem 1rem;
   align-items: center;
-  min-height: 32px;
+  width: 100%;
+  max-width: 100vw;
+  min-height: var(--bev-status-height, 32px);
   padding: 0.35rem 0.85rem;
+  overflow-x: clip;
   background: var(--bev-bg-panel);
   border-top: 1px solid var(--bev-border);
   font-family: var(--bev-font-mono);

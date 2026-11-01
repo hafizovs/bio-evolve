@@ -9,8 +9,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  height: 48px;
+  width: 100%;
+  max-width: 100vw;
+  min-width: 0;
+  height: var(--bev-toolbar-height, 48px);
   padding: 0 0.85rem;
+  overflow-x: clip;
   background: var(--bev-bg-panel);
   border-bottom: 1px solid var(--bev-border);
 }
@@ -18,6 +22,7 @@
 .bev-toolbar__brand {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   line-height: 1.1;
   min-width: 0;
 }
@@ -45,6 +50,7 @@
 
 .bev-toolbar button {
   appearance: none;
+  flex-shrink: 0;
   border: 1px solid var(--bev-border);
   background: var(--bev-bg-panel-elevated);
   color: var(--bev-text);
@@ -53,6 +59,7 @@
   padding: 0.35rem 0.65rem;
   border-radius: 4px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .bev-toolbar button:hover {
@@ -76,5 +83,36 @@
 
   .bev-toolbar__subtitle {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .bev-toolbar {
+    gap: 0.4rem;
+    padding: 0 0.65rem;
+  }
+
+  .bev-toolbar button {
+    font-size: 0.72rem;
+    padding: 0.32rem 0.5rem;
+  }
+
+  .bev-toolbar__title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .bev-toolbar__optional {
+    display: none;
+  }
+
+  .bev-toolbar {
+    gap: 0.35rem;
+    padding: 0 0.5rem;
+  }
+
+  .bev-toolbar__title {
+    font-size: 1rem;
   }
 }
