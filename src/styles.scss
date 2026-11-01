@@ -9,8 +9,10 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  max-width: 100%;
   height: 100%;
   overflow: hidden;
+  overflow-x: clip;
   background: var(--bev-bg-deep);
   color: var(--bev-text);
   font-family: var(--bev-font-ui);
@@ -18,6 +20,8 @@ body {
 
 :root,
 [data-theme='dark'] {
+  --bev-toolbar-height: 48px;
+  --bev-status-height: 32px;
   --bev-bg-deep: #070b12;
   --bev-bg-panel: #0d1522;
   --bev-bg-panel-elevated: #121c2c;
